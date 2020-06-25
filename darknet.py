@@ -42,7 +42,7 @@ def parse_cfg(cfgfile):
     network to be built. Block is represented as a dictionary in the list
     
     """
-    file = open(cfgfile, 'r')
+    file = open(pytorch-yolo-v3-copy3/cfgfile, 'r')
     lines = file.read().split('\n')     #store the lines in a list
     lines = [x for x in lines if len(x) > 0] #get read of the empty lines 
     lines = [x for x in lines if x[0] != '#']  
@@ -290,7 +290,7 @@ def create_modules(blocks):
 class Darknet(nn.Module):
     def __init__(self, cfgfile):
         super(Darknet, self).__init__()
-        self.blocks = parse_cfg(cfgfile)
+        self.blocks = parse_cfg(pytorch-yolo-v3-copy3/cfgfile)
         self.net_info, self.module_list = create_modules(self.blocks)
         self.header = torch.IntTensor([0,0,0,0])
         self.seen = 0
